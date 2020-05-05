@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WPU disable search
-Plugin URI: http://github.com/Darklg/WPUtilities
+Plugin URI: https://github.com/WordPressUtilities/wpudisablesearch
 Description: Disable search
-Version: 0.2.1
+Version: 0.2.2
 Author: Darklg
 Author URI: http://darklg.me/
 License: MIT License
