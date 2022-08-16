@@ -3,7 +3,7 @@
 Plugin Name: WPU disable search
 Plugin URI: https://github.com/WordPressUtilities/wpudisablesearch
 Description: Disable search
-Version: 0.3.0
+Version: 0.4.0
 Author: Darklg
 Author URI: http://darklg.me/
 License: MIT License
@@ -35,6 +35,14 @@ function wpu_disable_search__init() {
     }
     add_action('parse_query', 'wpu_disable_search__in_query');
     add_filter('get_search_form', '__return_null');
+}
+
+add_action('admin_bar_menu', 'wpu_disable_search__admin_bar', 999);
+function wpu_disable_search__admin_bar($wp_admin_bar) {
+    if (is_admin() || !is_admin_bar_showing()) {
+        return;
+    }
+    $wp_admin_bar->remove_node('search');
 }
 
 /* ----------------------------------------------------------
